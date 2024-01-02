@@ -11,18 +11,23 @@ module.exports = {
       },
       nome: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       cpf: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       ativo: {
         type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       role: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

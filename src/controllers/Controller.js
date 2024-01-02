@@ -27,7 +27,9 @@ class Controller {
         dadosParaCriacao
       );
       return res.status(200).json(novoRegistroCriado);
-    } catch (erro) {}
+    } catch (erro) {
+      return res.status(500).json({ mensagem: `${erro.message}` });
+    }
   }
   async atualiza(req, res) {
     const { id } = req.params;
